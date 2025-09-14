@@ -1,0 +1,65 @@
+/* Import Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------- GLOBAL STYLES -------------------- */
+html, body {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans;
+  scroll-behavior: smooth;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+/* -------------------- CUSTOM SCROLLBAR -------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 4px;
+}
+
+/* -------------------- LINE CLAMP UTILITY -------------------- */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+/* -------------------- BUTTON STYLES -------------------- */
+.btn-primary {
+  @apply bg-primary text-white px-4 py-2 rounded-xl hover:bg-primary-dark transition;
+}
+.btn-secondary {
+  @apply bg-secondary text-white px-4 py-2 rounded-xl hover:bg-secondary-dark transition;
+}
+
+/* -------------------- DARK MODE FIXES -------------------- */
+.dark input,
+.dark textarea {
+  @apply bg-gray-700 text-gray-100 border-gray-600;
+}
+.dark select {
+  @apply bg-gray-700 text-gray-100 border-gray-600;
+}
+.dark button {
+  @apply text-white;
+}
+
+/* -------------------- RESPONSIVE TYPOGRAPHY -------------------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+}
