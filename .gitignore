@@ -1,0 +1,16 @@
+# MongoDB connection string (replace with your own from MongoDB Atlas)
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/ai-learning?retryWrites=true&w=majority
+
+# JWT secret key
+JWT_SECRET=superSecretKeyChangeThis
+
+# Backend server port
+PORT=5000
+
+# Frontend URL (for CORS)
+FRONTEND_URL=http://localhost:3000
+
+# HuggingFace Inference API
+HUGGINGFACE_API_KEY=hf_your_api_key_here
+HUGGINGFACE_QG_MODEL=mrm8488/t5-base-finetuned-question-generation-ap
+HUGGINGFACE_QA_MODEL=deepset/roberta-base-squad2
